@@ -99,6 +99,26 @@
                 white-space: normal;
             }
         }
+        /* Show desktop logo only on desktop */
+.desktop-logo {
+    display: block;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+/* Show mobile logo only on mobile */
+@media (max-width: 768px) {
+    .desktop-logo {
+        display: none;
+    }
+
+    .mobile-logo {
+        display: block;
+    }
+}
+
     </style>
     <script src="//code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
         crossorigin="anonymous"></script>
@@ -128,20 +148,26 @@
         <div class="container">
             <div class="navbar-header">
                 <!-- logo -->
-                <div class="site-branding">
-                    <div id="w_81592175" class="widget v_102166346 swoogo-logo logo desktop-logo"
-                        data-single-click-settings="on" data-resize-widget="on">
-                        <div><a class="mobile-logo-img" href="index.html"><img class="img-responsive resize-target "
-                                    src="logo.png" alt="BMC Helix Roadshow Riyadh"
-                                    style="margin: 0 auto;display:block; max-height:76.9375px;"></a></div>
-                    </div>
-                    <div id="w_81592176" class="widget v_102166347 swoogo-mobile-logo logo mobile-logo"
-                        data-single-click-settings="on" data-resize-widget="on">
-                        <!-- <div><a class="mobile-logo-img" href="index.html"><img class="img-responsive resize-target "
-                                    src="logo.png" alt="BMC Helix Roadshow Riyadh"
-                                    style="margin: 0 auto;display:block; max-height:300px;"></a></div> -->
-                    </div>
-                </div>
+<div class="site-branding">
+    <div id="w_81592175" class="widget v_102166346 swoogo-logo logo desktop-logo">
+        <div>
+            <a href="index.html">
+                <img src="logo.png" alt="BMC Helix Roadshow Riyadh"
+                     style="margin:0 auto;display:block;max-height:76.9375px;">
+            </a>
+        </div>
+    </div>
+
+    <div id="w_81592176" class="widget v_102166347 swoogo-mobile-logo logo mobile-logo">
+        <div>
+            <a href="index.html">
+                <img src="logo.png" alt="BMC Helix Roadshow Riyadh"
+                     style="margin:0 auto;display:block;max-height:300px;">
+            </a>
+        </div>
+    </div>
+</div>
+
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items"
                     aria-expanded="false">
                     <span class="icon-bar"></span>
@@ -430,5 +456,6 @@
 
 
 </html>
+
 
 
